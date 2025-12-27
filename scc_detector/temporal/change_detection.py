@@ -1,5 +1,6 @@
 """
 Temporal Change Detection for SCC Monitoring
+=============================================
 
 Tracks lesion evolution over time to detect:
 - Size progression (growth rate)
@@ -10,7 +11,21 @@ Tracks lesion evolution over time to detect:
 
 The "E" in ABCDE criteria - Evolution is one of the strongest 
 indicators of malignancy.
+
+    "Time is the cruelest witness.
+     It does not lie. It does not forget.
+     The lesion that was not there last month.
+     The border that has grown irregular.
+     The color that has deepened.
+     
+     Every day you wait is another day the cancer grows."
+
+THE TEMPORAL INTERROGATION: WHAT HAS CHANGED?
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The temporal analysis toolkit
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import numpy as np
 from typing import Dict, List, Tuple, Optional

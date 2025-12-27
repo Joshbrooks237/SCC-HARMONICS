@@ -1,5 +1,6 @@
 """
 Web Application for SCC Multi-Spectrum Detection System
+========================================================
 
 Clinical workflow interface:
 1. Patient registration
@@ -8,7 +9,24 @@ Clinical workflow interface:
 4. Risk assessment display
 5. Report generation
 6. Temporal tracking
+
+    "The web browser is merely another surgical theater.
+     The interface, another set of instruments.
+     The user, another colleague in the fight.
+     
+     We build for the clinician at 2 AM.
+     For the researcher seeking patterns.
+     For the patient seeking answers.
+     
+     The interface must be fast. Clear. Unambiguous.
+     Lives may depend on it."
+
+THE INTERFACE: WHERE DETECTION MEETS HUMANITY.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The web framework arsenal
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import os
 import sys

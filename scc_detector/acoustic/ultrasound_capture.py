@@ -1,5 +1,6 @@
 """
 Ultrasound Capture System for SCC Detection
+============================================
 
 Multi-frequency ultrasound acquisition across:
 - Surface acoustic (40-200 kHz): Texture and surface mapping
@@ -10,7 +11,20 @@ Hardware interfaces for:
 - Murata ultrasonic transducers (40 kHz)
 - Butterfly iQ+ (clinical)
 - Research-grade high-frequency systems
+
+    "We speak to the tissue with sound.
+     It answers with echoes.
+     But the echoes are NOT clean copies.
+     They are TRANSFORMED by the tissue's nature.
+     
+     In that transformation lies the truth."
+
+THE ACOUSTIC INTERROGATION: SENDING THE QUESTIONS.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The acoustic transmission toolkit
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import numpy as np
 from typing import Dict, List, Tuple, Optional, Union

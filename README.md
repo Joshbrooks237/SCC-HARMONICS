@@ -2,21 +2,46 @@
 
 ## DETECT AND DEFLECT
 
+> *"The cancer speaks in harmonics. We are finally listening."*
+
 ---
+
+## TL;DR
+
+**SCC-HARMONICS** is a multi-modal early detection system for **Squamous Cell Carcinoma** that combines:
+
+| Modality | Spectrum | What It Catches |
+|----------|----------|-----------------|
+| 📸 Visual | 400-700nm | Shape, color, texture, border irregularity |
+| 🌡️ Thermal | 8-14μm | Metabolic heat, vascular patterns |
+| 🔊 Acoustic | 40kHz-50MHz | **Harmonic distortion signatures** |
+| 📈 Temporal | Time-series | Growth rate, evolution tracking |
+| 🧠 Fusion | All combined | AI-weighted risk assessment |
+
+```bash
+# Quick start
+git clone https://github.com/Joshbrooks237/SCC-HARMONICS.git
+cd SCC-HARMONICS
+python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+python main.py --demo
+```
+
+**Output:** Risk score (0-100%), differential diagnosis, explainable factors, clinical recommendation.
+
+---
+
+## THE MANIFESTO
 
 *The pupils dilate. The hands steady. The mind EXPANDS.*
 
----
-
-Listen to me. LISTEN. 
-
-They told Semmelweis he was mad. They told Lister his carbolic spray was theatrical nonsense. They let mothers die in childbed fever because they couldn't see what was INVISIBLE to their eyes but SCREAMING in the data.
+They told Semmelweis he was mad. They told Lister his carbolic spray was theatrical nonsense. They let mothers die because they couldn't see what was INVISIBLE to their eyes but SCREAMING in the data.
 
 I see it now. Clear as the Knickerbocker's morning light through surgical glass.
 
 **The cancer speaks in HARMONICS.**
 
-Every tissue has a voice. A frequency. A song it sings back when you interrogate it with sound. Normal skin hums in perfect fifths. But the malignancy? The squamous cell carcinoma creeping beneath the dermis like a thief in the night? 
+Every tissue has a voice. A frequency. A song it sings back when you interrogate it with sound. Normal skin hums in perfect fifths. But the malignancy? The squamous cell carcinoma creeping beneath the dermis like a thief in the night?
 
 *It DISTORTS.*
 
@@ -24,214 +49,191 @@ The second harmonic rises. The third. The tissue has lost its elastic virtue, co
 
 ---
 
-## THE METHOD
+## METHOD OVERVIEW
+
+### The Multi-Spectrum Approach
 
 ```
-EVERY FREQUENCY. EVERY SPECTRUM. EVERY POSSIBLE MODALITY.
-
-VISUAL   │ 400-700nm    │ The eyes see color. Shape. Border.
-THERMAL  │ 8-14μm       │ The cancer burns hotter. Always hotter.
-ACOUSTIC │ 40kHz-50MHz  │ HERE. This is where they HIDE.
-TEMPORAL │ Time itself  │ The tumor grows while you HESITATE.
-
-FUSION   │ ALL OF IT    │ One mind. One verdict. One chance.
+┌─────────────────────────────────────────────────────────────────────┐
+│                        SENSING STACK                                │
+├─────────────┬─────────────┬─────────────┬─────────────┬─────────────┤
+│   VISUAL    │   THERMAL   │   ACOUSTIC  │   TEMPORAL  │   FUSION    │
+│  400-700nm  │   8-14μm    │ 40kHz-50MHz │  Evolution  │   AI Risk   │
+├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+│ RGB/HDR     │ Temperature │ Surface     │ Size Δ      │ Feature     │
+│ Polarized   │ Vascular    │ Clinical    │ Color Δ     │ Extraction  │
+│ Dermoscopy  │ Metabolic   │ High-Freq   │ Texture Δ   │ Ensemble    │
+│ UV 365nm    │ Recovery    │ Harmonics   │ Shape Δ     │ Explainable │
+└─────────────┴─────────────┴─────────────┴─────────────┴─────────────┘
 ```
 
-I will not lose another patient to a lesion that could have been seen, SHOULD have been seen, if only we had looked with every eye available to us.
+### The Harmonic Signature
+
+When ultrasound penetrates tissue, it doesn't simply echo back—the tissue TRANSFORMS the wave. Cancer is chaos given cellular form. Its elasticity is wrong. Its vasculature is anarchic. When the fundamental frequency enters this corruption, it shatters into **harmonics**:
+
+```
+Fundamental f₀   ████████████████████  100%  ← The question
+2nd Harmonic     ████████████          60%   ← KEY SCC MARKER
+3rd Harmonic     ███████               35%   ← Confirmation  
+4th Harmonic     ████                  20%
+5th-8th          ██▌█▏                 <10%  ← Fingerprint complete
+───────────────────────────────────────────
+Total Harmonic Distortion (THD):
+  • Normal tissue:  < 0.15
+  • Suspicious:     0.15 - 0.25
+  • MALIGNANT:      > 0.25
+```
 
 ---
 
-## THE HARMONICS
-
-*This is the revelation. Pay attention.*
-
-When ultrasound penetrates tissue, it doesn't simply echo back. The tissue TRANSFORMS the wave. Compresses. Stretches. If the tissue is uniform, the return is clean. 
-
-But cancer is CHAOS given cellular form.
-
-The elasticity is wrong. The vasculature is anarchic. The cellular architecture is a mockery of God's design. And when the fundamental frequency enters this corruption, it shatters into HARMONICS:
-
-```
-Fundamental f₀  ████████████████████  The question
-2nd Harmonic    ████████████         The first betrayal  
-3rd Harmonic    ███████              Confirmation
-4th Harmonic    ████                 Certainty builds
-5th Harmonic    ██                   The noose tightens
-6th Harmonic    █                    
-7th Harmonic    ▌                    
-8th Harmonic    ▏                    GUILTY.
-```
-
-Total Harmonic Distortion. THD. The fingerprint of malignancy.
-
-Normal tissue: THD < 0.15  
-*Suspicious tissue: THD > 0.20*  
-**CARCINOMA: THD >> 0.25**
-
----
-
-## THE ARCHITECTURE
+## ARCHITECTURE
 
 ```
 SCC-HARMONICS/
 │
-├── main.py                 ← THE COMMAND. Run this. NOW.
+├── main.py                     # Entry point - CLI interface
+├── requirements.txt            # Dependencies
+├── README.md                   # You are here
 │
-└── scc_detector/
-    ├── visual/             ← What the dermoscope reveals
-    │   ├── capture.py      ← RGB. Polarized. UV. ALL OF IT.
-    │   └── features.py     ← ABCDE. Texture. Color variance.
+└── scc_detector/               # Core package
     │
-    ├── thermal/            ← The heat of cellular rebellion
-    │   └── thermal_analysis.py
+    ├── visual/                 # Visual spectrum (400-700nm)
+    │   ├── capture.py          # RGB, polarized, UV, dermoscopy capture
+    │   └── features.py         # ABCDE criteria, GLCM, LBP texture
     │
-    ├── acoustic/           ← THE HARMONICS. THE KEY TO EVERYTHING.
-    │   ├── ultrasound_capture.py   ← 40kHz to 50MHz sweep
-    │   └── harmonic_analysis.py    ← Extract. Analyze. CONVICT.
+    ├── thermal/                # Infrared spectrum (8-14μm)
+    │   └── thermal_analysis.py # Temperature mapping, vascular patterns
     │
-    ├── temporal/           ← Time is the enemy. Track it.
-    │   └── change_detection.py
+    ├── acoustic/               # Ultrasound spectrum (40kHz-50MHz)
+    │   ├── ultrasound_capture.py   # Multi-frequency acquisition
+    │   └── harmonic_analysis.py    # THE KEY: 2nd-8th harmonic extraction
     │
-    ├── fusion/             ← All modalities. One verdict.
-    │   └── multimodal_fusion.py
+    ├── temporal/               # Time-series analysis
+    │   └── change_detection.py # Growth tracking, evolution detection
     │
-    ├── models/             ← The machine learns what we teach it
-    │   └── risk_classifier.py
+    ├── fusion/                 # Multi-modal integration
+    │   └── multimodal_fusion.py # Weighted ensemble, risk scoring
     │
-    ├── calibration/        ← Trust nothing. Verify everything.
-    │   └── phantoms.py
+    ├── models/                 # Machine learning
+    │   └── risk_classifier.py  # PyTorch/XGBoost/sklearn ensemble
     │
-    └── ui/                 ← For those who need... pictures
-        └── app.py
+    ├── calibration/            # Phantoms & calibration
+    │   └── phantoms.py         # Tissue-mimicking phantom recipes
+    │
+    └── ui/                     # Web interface
+        └── app.py              # Flask application
 ```
 
 ---
 
 ## EXECUTION
 
+### Installation
+
 ```bash
-# Enter the operating theater
-cd "SCC harmonics"
+# Clone repository
+git clone https://github.com/Joshbrooks237/SCC-HARMONICS.git
+cd SCC-HARMONICS
 
-# Prepare the environment (sterile field)
+# Create virtual environment
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# Instruments
+# Install dependencies
 pip install -r requirements.txt
+```
 
-# THE PROCEDURE
+### Running the System
+
+```bash
+# Interactive mode (recommended for first run)
+python main.py
+
+# Run demonstration with synthetic data
 python main.py --demo
 
-# Or the web interface, for the squeamish
+# Start web interface
 python main.py --web
+# Then open http://127.0.0.1:5000
+
+# Analyze a specific image
+python main.py --analyze path/to/lesion.jpg
+
+# Run calibration
+python main.py --calibrate
 ```
 
----
-
-## THE SPECIFICATIONS
-
-### Visual Capture
-- Standard RGB with HDR fusion (no detail lost to shadow or bloom)
-- Cross-polarized (see BENEATH the surface reflection)
-- Parallel-polarized (surface keratin assessment)
-- UV fluorescence 365nm (metabolic aberration)
-- Multispectral decomposition (melanin index, erythema index)
-
-### Thermal Imaging
-- Long-wave infrared 8-14μm
-- ΔT measurement (tumor vs. surrounding tissue)
-- Vascular pattern detection (angiogenesis markers)
-- Dynamic cooling recovery (thermal conductivity abnormality)
-
-### Acoustic Interrogation
-**This is where we catch them.**
-- Surface acoustic 40-200 kHz (texture mapping)
-- Clinical ultrasound 5-15 MHz (depth penetration to 30mm)
-- High-frequency 20-50 MHz (cellular resolution, superficial detail)
-- **FULL HARMONIC SPECTRUM ANALYSIS**: 2nd through 8th harmonics
-- THD spatial mapping
-- B/A nonlinearity parameter extraction
-
-### Temporal Surveillance
-- Size progression (mm²/month)
-- Color drift in LAB space
-- Border evolution
-- Volume doubling time estimation
-
-### Fusion & Verdict
-- Weighted multi-modal integration
-- Attention-based feature selection
-- Ensemble classification (GBM, RF, MLP)
-- **Explainable risk factors**
-
----
-
-## THE RISK ASSESSMENT
+### Example Output
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   RISK SCORE: [████████████████░░░░░░░░░░░░░░░░░░░░░░░░░] 42%   ║
-║                                                                  ║
-║   Visual Contribution:   ████████████████░░░░  80%               ║
-║   Thermal Contribution:  ██████████░░░░░░░░░░  50%               ║
-║   Acoustic Contribution: ██████████████░░░░░░  70%               ║
-║   Temporal Contribution: ░░░░░░░░░░░░░░░░░░░░   0%  (no history)║
-║                                                                  ║
-║   DIFFERENTIAL:                                                  ║
-║   ├── SCC:      42%                                              ║
-║   ├── BCC:      18%                                              ║
-║   ├── Melanoma:  8%                                              ║
-║   └── Benign:   32%                                              ║
-║                                                                  ║
-║   RECOMMENDATION: Dermatology referral within 4-6 weeks         ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
+╔════════════════════════════════════════════════════════════════════╗
+║  MULTI-SPECTRUM SCC DETECTION SYSTEM - CLINICAL REPORT            ║
+╚════════════════════════════════════════════════════════════════════╝
+
+  OVERALL RISK: [████████████████████░░░░░░░░░░░░░░░░░░░░] 52%
+  Category: MODERATE
+  Confidence: 85%
+
+  🟡 Dermatology consultation within 4-6 weeks
+
+  MODALITY CONTRIBUTIONS:
+  ✓ Visual     [████████████████░░░░] 80%
+  ✓ Thermal    [████████████░░░░░░░░] 60%
+  ✓ Acoustic   [██████████████░░░░░░] 70%
+  ○ Temporal   [░░░░░░░░░░░░░░░░░░░░]  0%  (no history)
+
+  DIFFERENTIAL:
+  ├── SCC:      52%
+  ├── BCC:      18%
+  ├── Melanoma:  8%
+  └── Benign:   32%
 ```
 
 ---
 
 ## HARDWARE REQUIREMENTS
 
-### Tier I - Prototype ($1,500-2,500)
-*Sufficient to prove the concept. To BELIEVE.*
-- Smartphone with manual camera control
-- Macro dermoscopy lens attachment  
-- Polarizing filter set
-- UV LED 365nm
-- FLIR ONE Pro thermal camera
-- Murata 40kHz ultrasonic transducers
-- 192kHz audio interface
+### Tier I — Prototype ($1,500-2,500)
+*Proof of concept. Enough to believe.*
 
-### Tier II - Clinical ($5,000-8,000)
-*For the serious practitioner.*
-- Butterfly iQ+ ultrasound
+| Component | Purpose | Est. Cost |
+|-----------|---------|-----------|
+| Smartphone (manual camera) | Visual capture | $400-800 |
+| Macro dermoscopy lens | 10x magnification | $100-500 |
+| Polarizing filter set | Surface/subsurface separation | $50 |
+| UV LED (365nm) | Fluorescence imaging | $30 |
+| FLIR ONE Pro | Thermal imaging | $280-400 |
+| Murata 40kHz transducers | Surface acoustic | $50 |
+| USB audio interface (192kHz) | Signal acquisition | $150 |
+
+### Tier II — Clinical ($5,000-8,000)
+*For serious practitioners.*
+
+- Butterfly iQ+ ultrasound probe
 - DermLite DL4 dermoscope
 - FLIR E8-XT thermal camera
 - Multi-frequency probe assembly
 
-### Tier III - Research ($25,000-50,000)
-*For those who will write the papers. Change the textbooks.*
+### Tier III — Research ($25,000-50,000)
+*For those who will write the papers.*
+
 - 20-50 MHz high-frequency ultrasound
 - Hyperspectral imaging camera
-- OCT system
+- OCT (Optical Coherence Tomography) system
 
 ---
 
 ## THE PHILOSOPHY
 
-**USE EVERYTHING.**
+**USE EVERYTHING. MISS NOTHING.**
 
-**MISS NOTHING.**
-
-Every photon reflected. Every thermal gradient. Every acoustic reflection and its bastard harmonic children. Every day that passes while the lesion grows.
+Every photon reflected. Every thermal gradient. Every acoustic reflection and its harmonic children. Every day that passes while the lesion grows.
 
 The cancer hides in the gaps between modalities. In the frequencies we don't examine. In the time we waste deliberating.
 
 No more.
 
-This system interrogates the lesion with EVERYTHING we have. Visual. Thermal. Acoustic. Temporal. And then it FUSES that intelligence into a single assessment that will not—CANNOT—be fooled.
+This system interrogates the lesion with EVERYTHING available. Visual. Thermal. Acoustic. Temporal. And then it FUSES that intelligence into a single assessment that will not—CANNOT—be fooled.
 
 Because someone's mother. Someone's father. Someone's child.
 
@@ -239,41 +241,82 @@ They're counting on us to SEE what is there.
 
 ---
 
-## DISCLAIMER
+## NEXT STEPS / CONTRIBUTION IDEAS
 
-*The hands are steady now. The mind is focused. But listen—*
+We welcome collaborators. The operating theater has room for more.
 
-This is a SCREENING TOOL. A first line of defense. A way to catch what might otherwise slip through.
+### High Priority
+- [ ] **Clinical validation study** — Partner with dermatology departments
+- [ ] **Real hardware integration** — Replace simulation with actual device drivers
+- [ ] **Training data collection** — Build labeled dataset of SCC/BCC/melanoma/benign
+- [ ] **Model optimization** — Hyperparameter tuning, architecture search
 
-It does not replace the pathologist's microscope.  
-It does not replace the surgeon's blade.  
-It does not replace CLINICAL JUDGMENT.
+### Medium Priority
+- [ ] **Mobile deployment** — iOS/Android app for field screening
+- [ ] **DICOM integration** — Medical imaging standard compliance
+- [ ] **HL7/FHIR support** — EHR integration
+- [ ] **Multi-language support** — International deployment
 
-But it will find them EARLIER.  
-Before the lymph nodes.  
-Before the metastasis.  
-Before the surgical margins become a prayer.
+### Research Extensions
+- [ ] **Additional cancer types** — Adapt for BCC, melanoma, Merkel cell
+- [ ] **Depth estimation** — Predict tumor invasion depth from harmonics
+- [ ] **Treatment response tracking** — Monitor regression/progression
+- [ ] **Federated learning** — Train across institutions without sharing data
+
+### How to Contribute
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## ⚠️ DISCLAIMER
+
+**This is a SCREENING TOOL only.**
+
+- It does NOT replace histopathological diagnosis
+- It does NOT replace clinical judgment
+- It is NOT FDA-approved or CE-marked
+- It is intended for RESEARCH and EDUCATIONAL purposes
+
+The system is designed to **augment**, not replace, the expertise of trained healthcare professionals. All findings must be correlated with clinical examination and confirmed by biopsy when indicated.
+
+### Ethical Use Statement
+This technology should be used to **improve patient outcomes**, not to replace the physician-patient relationship. Algorithmic recommendations are aids to decision-making, not decisions themselves.
 
 ---
 
 ## LICENSE
 
-MIT. Take it. Use it. IMPROVE IT.
+**MIT License**
+
+Take it. Use it. Improve it. Save lives.
 
 Every day you wait is another day the cancer grows.
 
 ---
 
+## ACKNOWLEDGMENTS
+
+Built in the spirit of medical pioneers who saw what others couldn't:
+- Ignaz Semmelweis (handwashing)
+- Joseph Lister (antiseptic surgery)
+- Wilhelm Röntgen (X-rays)
+
 *"I am not a monster. I am simply ahead of the curve."*
 
-— In the spirit of those who refused to accept that death was inevitable
-
 ---
+
+<div align="center">
 
 **DETECT AND DEFLECT**
 
 *The Knickerbocker Hospital, 1900*  
-*New York, New York*  
 *Where the future of medicine is being written*  
-*One impossible procedure at a time*
+*One impossible detection at a time*
 
+🔬
+
+</div>

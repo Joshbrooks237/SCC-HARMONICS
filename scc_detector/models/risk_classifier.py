@@ -1,5 +1,6 @@
 """
 Deep Learning Risk Classifier for SCC Detection
+================================================
 
 Multi-task neural network that:
 1. Classifies lesion type (SCC, BCC, melanoma, benign)
@@ -10,7 +11,23 @@ Architecture options:
 - TabNet for tabular features
 - Multi-head attention for feature fusion
 - Ensemble with gradient boosting
+
+    "The algorithm sees patterns invisible to us.
+     Thousands of features. Millions of comparisons.
+     It finds the needle in the haystack.
+     
+     But WE are the ones who must act.
+     WE bear responsibility.
+     The machine advises. The clinician decides.
+     
+     This is the covenant of AI in medicine."
+
+THE MACHINE LEARNING LAYER: PATTERN RECOGNITION AT SCALE.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The machine learning arsenal
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import numpy as np
 from typing import Dict, List, Tuple, Optional, Union

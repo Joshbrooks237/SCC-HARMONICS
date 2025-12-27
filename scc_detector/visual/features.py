@@ -1,5 +1,6 @@
 """
 Visual Feature Extraction for SCC Detection
+============================================
 
 Implements comprehensive feature extraction including:
 - ABCDE criteria (Asymmetry, Border, Color, Diameter, Evolution)
@@ -8,7 +9,21 @@ Implements comprehensive feature extraction including:
 - Polarization ratios
 - UV fluorescence patterns
 - Multispectral indices
+
+    "A - Asymmetry: Is it balanced? Cancer rarely is.
+     B - Border: Are edges smooth? Malignancy frays.
+     C - Color: Is it uniform? Chaos breeds variation.
+     D - Diameter: Greater than 6mm? Size matters.
+     E - Evolution: Has it changed? Time is the witness.
+     
+     The ABCDE of suspicion."
+
+EXTRACTING THE VISUAL CONFESSION.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The feature extraction toolkit
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import cv2
 import numpy as np

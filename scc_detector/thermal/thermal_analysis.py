@@ -1,12 +1,26 @@
 """
 Thermal Spectrum Analysis for SCC Detection
+============================================
 
 Infrared thermal imaging captures:
 - Metabolic heat signatures (cancer cells have higher metabolism)
 - Vascular patterns (tumors have increased blood flow)
 - Thermal asymmetry (comparing to contralateral tissue)
 - Dynamic thermal recovery patterns
+
+    "Cancer burns hotter. Always hotter.
+     The uncontrolled proliferation generates heat.
+     The anarchic vasculature pools warmth.
+     The tumor cannot hide its fever.
+     
+     Heat is truth."
+
+THE THERMAL INTERROGATION: WHERE METABOLISM CONFESSES.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The infrared arsenal
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import numpy as np
 from typing import Dict, List, Tuple, Optional

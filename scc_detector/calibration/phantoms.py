@@ -1,5 +1,6 @@
 """
 Tissue Phantoms for System Calibration and Validation
+======================================================
 
 Phantoms simulate tissue properties for:
 1. Visual system calibration (color targets)
@@ -12,7 +13,25 @@ Materials:
 - Silicone phantoms for optical properties
 - Graphite/intralipid for scattering
 - Microbubbles for harmonic response
+
+    "Before we can detect the lie,
+     we must know what truth looks like.
+     
+     The phantom is our ground truth.
+     Agar. Gelatin. Silicone. Dye.
+     We build fake skin, fake tumors, fake disease.
+     
+     So when we meet the real thing,
+     we recognize it immediately.
+     
+     Trust nothing. Verify everything."
+
+CALIBRATION: THE FOUNDATION OF TRUTH.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The phantom construction kit
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import numpy as np
 from typing import Dict, List, Tuple, Optional

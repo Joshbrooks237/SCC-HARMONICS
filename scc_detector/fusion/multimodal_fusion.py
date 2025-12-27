@@ -1,5 +1,6 @@
 """
 Multi-Modal Fusion Engine for SCC Detection
+============================================
 
 Combines all sensing modalities into actionable intelligence:
 - Visual features (ABCDE criteria, texture, color)
@@ -11,7 +12,17 @@ Fusion strategies:
 1. Early fusion: Concatenate all feature vectors
 2. Late fusion: Ensemble of modality-specific classifiers
 3. Attention-based fusion: Learn modality importance weights
+
+    "One witness may lie. Four witnesses, each speaking a different language,
+     each observing from a different vantage point - their agreement is TRUTH."
+                                                        - The Fusion Principle
+                                                        
+THE JURY ASSEMBLES. THE VERDICT APPROACHES.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The council of intelligences
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import numpy as np
 from typing import Dict, List, Tuple, Optional, Any
@@ -20,10 +31,19 @@ from datetime import datetime
 import warnings
 
 
+# ═══════════════════════════════════════════════════════════════════════════════
+# DATA STRUCTURES - The architecture of unified knowledge
+# ═══════════════════════════════════════════════════════════════════════════════
+
 @dataclass
 class FusedFeatures:
-    """Combined feature set from all modalities"""
-    # Individual modality vectors
+    """
+    Combined feature set from all modalities.
+    
+    Each modality sees part of the truth.
+    This structure holds the WHOLE truth.
+    """
+    # Individual modality vectors - the separate testimonies
     visual_features: np.ndarray
     thermal_features: np.ndarray
     acoustic_features: np.ndarray
@@ -47,8 +67,14 @@ class FusedFeatures:
 
 @dataclass
 class RiskAssessment:
-    """Complete risk assessment output"""
-    # Primary outputs
+    """
+    Complete risk assessment output.
+    
+    THE VERDICT.
+    All evidence weighed. All modalities heard.
+    This is what we conclude.
+    """
+    # Primary outputs - the headline
     risk_score: float  # 0-1 overall risk
     risk_category: str  # "low", "moderate", "high", "very_high"
     confidence: float  # Model confidence
@@ -74,12 +100,20 @@ class RiskAssessment:
     benign_probability: float
 
 
+# ═══════════════════════════════════════════════════════════════════════════════
+# THE FUSION ENGINE - Where separate truths become unified knowledge
+# ═══════════════════════════════════════════════════════════════════════════════
+
 class MultiModalFusionEngine:
     """
     Fuse multi-modal features for comprehensive risk assessment.
     
     Philosophy: Each modality provides unique information.
     Fusion maximizes detection sensitivity while maintaining specificity.
+    
+    "The cancer hides in the gaps between modalities.
+     Fusion illuminates those gaps.
+     There is nowhere left to hide."
     """
     
     def __init__(self, 

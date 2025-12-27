@@ -1,5 +1,6 @@
 """
 Multi-Spectrum Visual Capture System
+=====================================
 
 Comprehensive visual data acquisition across:
 - Standard RGB (400-700nm)
@@ -7,7 +8,20 @@ Comprehensive visual data acquisition across:
 - Dermoscopy (10x magnification)
 - UV photography (320-400nm)
 - Multispectral imaging
+
+    "The naked eye sees color and shape.
+     The dermoscope reveals structure.
+     Polarization separates surface from depth.
+     UV fluorescence exposes metabolic sin.
+     
+     We are no longer limited to mortal sight."
+
+THE FIRST INTERROGATION BEGINS.
 """
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# IMPORTS - The optical arsenal
+# ═══════════════════════════════════════════════════════════════════════════════
 
 import cv2
 import numpy as np
